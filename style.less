@@ -127,23 +127,29 @@ div.languages {
   }
 }
 
-.en .star {
+.en .stars {
   display: block;
 }
 
-.star {
-  @scale: 1.9;
+.stars {
+  @size: 500px;
   @offset: -5%;
 
   display: none;
-  width: 667px/@scale;
-  height: 634px/@scale;
+  width: @size;
+  height: @size;
   z-index: -1;
   position: absolute;
-  background-size: contain;
-  background-image: url('star.png');
+  background-image: url('stars.svg');
   top: @offset * 3;
   left: @offset;
+}
+
+@media (max-width: 780px) {
+  .stars {
+    width: 200px;
+    height: 170px;
+  }
 }
 
 h1, small {
