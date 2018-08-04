@@ -1,0 +1,171 @@
+@flag-red: #bf0a30;
+@flag-white: #e8e4e4;
+@flag-blue: #002868;
+@text-white: @flag-white;
+@text-black: #22201f;
+@bg-black: @text-black;
+@bg-white: @text-white;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Oswald, Helvetica, sans-serif;
+
+  &.fr {
+    background: @flag-blue;
+    background: -moz-linear-gradient(
+      -45deg,
+      @flag-blue 0%,
+      @flag-blue 33%,
+      @flag-white 33%,
+      @flag-white 66%,
+      @flag-red 66%,
+      @flag-red 100%
+    );
+    background: -webkit-linear-gradient(
+      -45deg,
+      @flag-blue 0%,
+      @flag-blue 33%,
+      @flag-white 33%,
+      @flag-white 66%,
+      @flag-red 66%,
+      @flag-red 100%
+    );
+    background: linear-gradient(
+      135deg,
+      @flag-blue 0%,
+      @flag-blue 33%,
+      @flag-white 33%,
+      @flag-white 66%,
+      @flag-red 66%,
+      @flag-red 100%
+    );
+  }
+
+  &.en {
+    background: @flag-red;
+    background: -moz-linear-gradient(
+      -45deg,
+      @flag-blue 0%,
+      @flag-blue 30%,
+      @flag-white 30%,
+      @flag-white 44%,
+      @flag-red 44%,
+      @flag-red 58%,
+      @flag-white 58%,
+      @flag-white 72%,
+      @flag-red 72%,
+      @flag-red 86%,
+      @flag-white 86%,
+      @flag-white 100%
+    );
+    background: -webkit-linear-gradient(
+      -45deg,
+      @flag-blue 0%,
+      @flag-blue 30%,
+      @flag-white 30%,
+      @flag-white 44%,
+      @flag-red 44%,
+      @flag-red 58%,
+      @flag-white 58%,
+      @flag-white 72%,
+      @flag-red 72%,
+      @flag-red 86%,
+      @flag-white 86%,
+      @flag-white 100%
+    );
+    background: linear-gradient(
+      135deg,
+      @flag-blue 0%,
+      @flag-blue 30%,
+      @flag-white 30%,
+      @flag-white 44%,
+      @flag-red 44%,
+      @flag-red 58%,
+      @flag-white 58%,
+      @flag-white 72%,
+      @flag-red 72%,
+      @flag-red 86%,
+      @flag-white 86%,
+      @flag-white 100%
+    );
+  }
+}
+
+div.languages {
+  position: absolute;
+  display: block;
+  width: 80%;
+  top: 10px;
+  left: 10%;
+  right: 10%;
+  text-align: center;
+
+  a {
+    position: relative;
+    display: inline-block;
+    background-color: @bg-black;
+    color: @text-white;
+    text-decoration: none;
+    margin: 5px;
+    min-width: 60px;
+    padding: 5px 10px 9px;
+    outline: 1px solid @bg-black;
+
+    &.active {
+      background-color: @bg-white;
+      color: @text-black;
+      cursor: default;
+    }
+
+    &:hover {
+
+    }
+  }
+}
+
+h1, small {
+  text-align: center;
+  cursor: default;
+  color: @text-black;
+}
+
+h1 {
+  font-size: 5em;
+  font-weight: 600;
+  line-height: 1.2;
+  background-color: @bg-black;
+  color: @text-white;
+  padding: 10px 40px 25px;
+}
+
+small {
+  display: block;
+  font-size: 1em;
+  margin-top: -50px;
+  font-weight: 300;
+}
+
+main {
+  .flex();
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  width: auto;
+}
+
+.flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
