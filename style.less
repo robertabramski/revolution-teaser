@@ -127,6 +127,25 @@ div.languages {
   }
 }
 
+.en .star {
+  display: block;
+}
+
+.star {
+  @scale: 1.9;
+  @offset: -5%;
+
+  display: none;
+  width: 667px/@scale;
+  height: 634px/@scale;
+  z-index: -1;
+  position: absolute;
+  background-size: contain;
+  background-image: url('star.png');
+  top: @offset * 3;
+  left: @offset;
+}
+
 h1, small {
   text-align: center;
   cursor: default;

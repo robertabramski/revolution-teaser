@@ -14,7 +14,7 @@ $(document).ready(function() {
   };
 
   var body = $('body');
-  var stars = body.append('<div class="stars" />');
+  var star = body.append('<div class="star" />');
   var mainHeading = $('h1');
   var languageOptionContainer = $('div.languages');
   var viewSourceMessage = $('small');
