@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  var selectedLanguage = 'fr';
   var languageOptions = {
     fr: {
       buttons: [{fr:'Fran&ccedil;ais'}, {en:'Anglais'}],
@@ -12,6 +11,9 @@ $(document).ready(function() {
       cta: 'View source for salary requirements.'
     }
   };
+
+  var defaultLanguage = Object.keys(languageOptions)[0];
+  var selectedLanguage = getLangFromSearch() || defaultLanguage;
 
   var body = $('body');
   var stars = body.append('<div class="stars" />');
@@ -35,6 +37,18 @@ $(document).ready(function() {
       clearTimeout(viewSourceTimer);
     }, 3000);
   });
+
+  function getLangFromSearch() {
+    var url = new URL(location.href);
+    var validLangs = Object.keys(languageOptions);
+    var lang = url.searchParams.get('lang');
+
+    if(validLangs.includes(lang)) {
+      return lang;
+    }
+
+    return null;
+  }
 
   function setLanguage() {
     var selectedLang = languageOptions[selectedLanguage];
