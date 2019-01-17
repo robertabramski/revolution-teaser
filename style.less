@@ -43,6 +43,7 @@ body {
       @flag-red 66%,
       @flag-red 100%
     );
+    background-repeat: no-repeat;
   }
 
   &.en {
@@ -92,6 +93,7 @@ body {
       @flag-white 86%,
       @flag-white 100%
     );
+    background-repeat: no-repeat;
   }
 }
 
@@ -152,6 +154,7 @@ div.languages {
   }
 }
 
+
 h1, small {
   text-align: center;
   cursor: default;
@@ -165,6 +168,13 @@ h1 {
   background-color: @bg-black;
   color: @text-white;
   padding: 10px 40px 25px;
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 18vw;
+    padding: 3vw 5vw 6vw;
+  }
 }
 
 small {
