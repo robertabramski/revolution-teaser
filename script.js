@@ -3,12 +3,12 @@ $(document).ready(function() {
     fr: {
       buttons: [{fr:'Fran&ccedil;ais'}, {en:'Anglais'}],
       text: 'Vive la r&eacute;volution!',
-      cta: 'Voir la source pour les exigences de salaire.'
+      cta: 'Voir la source du référentiel Github.'
     },
     en: {
       buttons: [{fr:'French'}, {en:'English'}],
       text: 'Long live the revolution!',
-      cta: 'View source for salary requirements.'
+      cta: 'View source for Github repository.'
     }
   };
 
